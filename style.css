@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900;&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient( rgb(0, 0, 0) 0%, #060d11 40% );
+    min-height: 100vh;
+    overflow-x: hidden;
+   
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+.logo {
+    position: relative;
+    height: auto;
+    width: 180px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+    padding: 6px 15px;
+    border-radius: 20px;
+}
+
+.navbar a:hover, .navbar a.active{
+    background: rgb(113, 32, 206);
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+}
+section::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient (to top,#060d11, #fff);
+    z-index: 1000;
+}
+section img {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+}
+
+section img#moon{
+    mix-blend-mode: screen;
+}
+
+.navbar a.loginButton{
+    color: rgb(113, 32, 206);
+    background: rgb(255, 255, 255);
+}
+
+
+.info{
+    position: relative;
+    padding: 100px;
+    background: #060d11;
+}
+
+.infoHeading{
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.info p {
+    font-size: 1em;
+    color: #fff;
+}
