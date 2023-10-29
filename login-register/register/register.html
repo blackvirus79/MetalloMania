@@ -1,0 +1,69 @@
+<! DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta charset="UTF -8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetalloMania</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="/images/logo/combine.png" class="logo">
+        <nav class="navbar">
+            <a href="/index.html" class="">Home</a>
+            <a href="https://www.steellunnitr.com/">Steellun</a>
+            <a href="http://inno.nitrkl.in/">Innovision</a>
+            <a href="https://www.steellunnitr.com/contact-us">Contact</a>
+            <a href="#" class="active">Login/Register</a>
+            
+        </nav>
+    </header>
+   
+<section>
+
+    <div class="login-box">
+        <form action="">
+            <h2>Register</h2>
+
+            <div class="input-box" id="nameInput">
+                <input type="text" required>
+                <label> Name </label> 
+            </div>
+
+     
+            <div class="input-box" id="emailInput">
+                <span class="icon">
+                    <ion-icon name="mail"></ion-icon>  
+                </span>
+                <input type="email" required>
+                <label> Email </label> 
+            </div>
+
+       
+            <div class="input-box" id="passwordInput">
+                <span class="icon"> 
+                    <ion-icon name="lock-closed"></ion-icon>
+                </span>
+                <input type="password" required>
+                <label> Password </label> 
+            </div>
+
+
+            <button type="submit" id="register-button"> Register </button>
+
+            <div class="register-link">
+                <p> Already have account?
+                    <a href="/login-register/login/login.html">login</a>
+                </p>
+            </div>
+
+        </form>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</section>
+<script type = "module" src = "script.js"></script>
+</body>
+</html>
