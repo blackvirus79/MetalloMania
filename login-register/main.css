@@ -1,0 +1,130 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+}
+
+.logo {
+  position: relative;
+  height: auto;
+  width: 180px;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 600;
+  padding: 6px 15px;
+  border-radius: 20px;
+}
+
+.navbar a:hover, .navbar a.active{
+  background: rgb(113, 32, 206);
+}
+
+body {
+  background: url("bg5.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  animation: animateBack 5s linear infinite;
+}
+
+h1 {
+  margin-bottom: 8%;
+  text-align: center;
+  font-family: "Fredoka One", cursive;
+  color:rgb(113, 32, 206);
+  letter-spacing: 0.1em;
+}
+
+p {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #000;
+  line-height: 0.1em;
+}
+
+p span {
+  background: #fff;
+  padding: 0 10px;
+}
+
+input {
+  margin-bottom: 3%;
+}
+
+input:last-of-type {
+  margin-bottom: 0;
+}
+
+input,
+button {
+  padding: 3%;
+  width: 100%;
+}
+
+.login-container {
+  width: 420px;
+  height: 480px;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+
+  padding: 7%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /* horizontal align */
+  width: 40vw;
+  margin-left: 30vw;
+  /* vertical align */
+  height: 70vh;
+  margin-top: 15vh;
+}
+
+#submit,
+#create-acct-btn {
+  background-color: rgb(113, 32, 206);
+  color: white;
+  border: none;
+  margin-top: 5%;
+}
+
+button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.3s;
+}
+
+#sign-up {
+  border: none;
+}
+
+#create-acct {
+  display: none;
+}
+
+#return-btn {
+  background: none;
+  color: grey;
+  text-decoration: underline;
+  border: none;
+  margin-top: 3%;
+}

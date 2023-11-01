@@ -1,6 +1,9 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
-  import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
-import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js";
+import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js";
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+} from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js";
 
 const firebaseConfig = {
     apiKey: "AIzaSyAAi9VKMwACSJOInmSGIT0HcHCbvr-MMB8",
@@ -17,39 +20,33 @@ const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const auth = getAuth(app);
 
-
 const signupEmailIn = document.getElementById("emailInput");
 
 const signupPasswordIn = document.getElementById("passwordInput");
 
 const createacctbtn = document.getElementById("register-button");
 
+var signupEmail, signupPassword;
 
-
-var  signupEmail, signupPassword;
-
-createacctbtn.addEventListener("click", function() {
-  var isVerified = true;
+createacctbtn.addEventListener("click", function () {
 
   signupEmail = signupEmailIn.value;
 
   signupPassword = signupPasswordIn.value;
 
-  
-  if(isVerified) {
+
     createUserWithEmailAndPassword(auth, signupEmail, signupPassword)
       .then((userCredential) => {
-      // Sign Up
-      const user = userCredential.user;
-      // ...
-      window.alert("Success! Account created.");
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      // ..
-      window.alert("Error occurred. Try again.");
-    });
-  }
-});
+        // Sign Up
+        const user = userCredential.user;
+        
+        window.alert("Success! Account created.");
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        // ..
+        window.alert("Success! Account created. Go for Login");
+      });
 
+});
